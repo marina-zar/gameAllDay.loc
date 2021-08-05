@@ -5,6 +5,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -34,7 +35,6 @@ const cssLoaders = extra => {
     let loaders = [
         MiniCssExtractPlugin.loader,
         'css-loader',
-
     ];
 
     if (extra) {
@@ -48,7 +48,7 @@ let conf = {
     mode: "development",
     entry: {
         main: './src/index.js',
-        analytics: './src/analyt.js'
+        // product: './src/product/index.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -57,7 +57,7 @@ let conf = {
     },
     optimization: optimization(),
     devServer: {
-        port: 4200,
+        port: 8081,
         contentBase: path.resolve(__dirname, 'dist'),
         // hot: isDev,
         // overlay: {
@@ -103,18 +103,53 @@ let conf = {
             filename: filename('css')
         }),
         new HTMLWebpackPlugin({
+            filename: "index.html",
             template: './src/index.html',
             minify: {
                 collapseWhitespace: isProd
             },
             cache: false,
+            // chunks: ['index']
+        }),
+        new HTMLWebpackPlugin({
+            filename: "product.html",
+            template: './src/product.html',
+            minify: {
+                collapseWhitespace: isProd
+            },
+            cache: false,
+            // chunks: ['product']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/partials/modal.html'),
+            location: 'aside',
+            template_filename: ['index.html', 'product.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/partials/header.html'),
+            location: 'header',
+            template_filename: ['index.html', 'product.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/partials/footer.html'),
+            location: 'footer',
+            template_filename: ['index.html', 'product.html']
+        }),
+        new HtmlWebpackPartialsPlugin({
+            path: path.join(__dirname, './src/partials/breadcrumbs.html'),
+            location: 'small',
+            template_filename: ['product.html']
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/favicon.ico'),
-                    to: path.resolve(__dirname, 'dist')
+                    from: path.resolve(__dirname, 'src/assets/img'),
+                    to: path.resolve(__dirname, 'dist/img')
+                },
+                {
+                    from: path.resolve(__dirname, 'src/assets/static'),
+                    to: path.resolve(__dirname, 'dist'),
                 }
             ],
         }),
