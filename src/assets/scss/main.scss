@@ -83,8 +83,9 @@ ul {
 }
 
 /**************Breadcrumbs************/
-
+.breadcrumb {
+  margin-bottom: 50px;
+}
 .breadcrumb-item.active {
   color: $primary;
-  margin-bottom: 50px;
 }

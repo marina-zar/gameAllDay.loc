@@ -22,45 +22,95 @@
     <section class="product-about">
         <div class="container-lg">
             <div class="row">
+                <div class="col-8 product-about__left">
+                    <div class="row">
 
-                <div class="product-about__img col-6">
-                    <div class="mainSlider">
-                        <div class="mainSlider__body">
-                            <div class="mainSlider__slide">
-                                <div class="mainSlider__zoom"></div>
-                                <div class="mainSlider__img">
-                                    <img src="img/7wonders/7wonders.jpg" alt="7 чудес">
+                        <div class="product-about__img col-6">
+                            <div class="mainSlider">
+                                <div class="mainSlider__body">
+                                    <div class="mainSlider__slide">
+                                        <div class="mainSlider__zoom"></div>
+                                        <div class="mainSlider__img">
+                                            <img src="img/7wonders/7wonders.jpg" alt="7 чудес">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mainSlider__preview preview-slider">
+                                    <div class="preview-slider__img">
+                                        <img src="img/7wonders/3.webp" alt="7 чудес">
+                                    </div>
+                                    <div class="preview-slider__img">
+                                        <img src="img/7wonders/1.jpg" alt="7 чудес">
+                                    </div>
+                                    <div class="preview-slider__img">
+                                        <img src="img/7wonders/2.jpg" alt="7 чудес">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="mainSlider__preview preview-slider">
-                            <div class="preview-slider__img">
-                                <img src="img/7wonders/3.webp" alt="7 чудес">
+
+                        <div class="product-about__body col-6">
+                            <h2 class="product-about__title">7 чудес: Міста</h2>
+                            <div class="product-about__price">1200 <span>грн</span></div>
+                            <div class="product-about__cart">
+                                <input class="product-about__numb" type="number" value="1">
+                                <a href="#" class="product-about__btn">У кошик</a>
                             </div>
-                            <div class="preview-slider__img">
-                                <img src="img/7wonders/1.jpg" alt="7 чудес">
-                            </div>
-                            <div class="preview-slider__img">
-                                <img src="img/7wonders/2.jpg" alt="7 чудес">
+                            <hr>
+                            <div class="article">код товару: AR2745-56</div>
+                            <div class="product-about__category">
+                                <span>Категорія:</span>
+                                <a href="#">Стратегії</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-about__body col-6">
-                    <h2 class="product-about__title">7 чудес: Міста</h2>
-                    <div class="product-about__price">1200 <span>грн</span></div>
-                    <div class="product-about__cart">
-                        <input class="product-about__numb" type="number" value="1">
-                        <input class="product-about__btn" type="button" value="У кошик">
-                    </div>
+                <div class="col-4 product-about__right">
+                    <h4 class="cart-box__title">Кошик</h4>
                     <hr>
-                </div>
+                    <div class="cart-box__body">
+                        <ul class="cart-box__list">
+                            <li class="cart-box__item item-cart d-flex">
+                                <a href="#" class="item-cart__delete">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                    </svg>
+                                </a>
+                                <a href="product.html" class="item-cart__name">
+                                    <img src="img/7wonders/7wonders.jpg" alt="7 чудес">
+                                    7 чудес: Міста
+                                </a>
+                                <div class="item-cart__price">
+                                    <span>1 x </span>1200 <span>грн</span>
+                                </div>
+                            </li>
 
+                          </ul>
+                        <div class="cart-box__totalPrice">
+                            <span>Разом: </span>
+                            <span>1200</span>
+                            <span>грн</span>
+                        </div>
+                        <div class="cart-box__buttons buttons">
+                            <a href="#" class="buttons__order buttons__order-see">Подивитись
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="buttons__order">Купити
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
+        .
     </main>
 
 <!-------- Footer------->

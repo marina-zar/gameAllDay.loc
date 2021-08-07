@@ -23,15 +23,6 @@ header{}
       order: 4;
     }
   }
-  .navbar-rightbox {
-    @media (max-width: 767px) {
-      order: 3;
-    }
-    .navbar-user {
-      cursor: pointer;
-      color: white;
-    }
-  }
   .navbar-nav {
     margin: 0;
     @media (min-width: 767px) {
@@ -53,15 +44,51 @@ header{}
   }
 }
 .navbar-rightbox {
+  @media (max-width: 767px) {
+    order: 3;
+  }
+  .navbar-user {
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+    &:hover {
+      color: $primary;
+    }
+  }
   .navbar-search {
     cursor: pointer;
     background: transparent;
     border: 0 transparent;
-    margin-right: 30px;
+    padding: 0;
+    margin-right: 20px;
     svg.icon-search {
       color: white;
       //font-size: 18px;
       transform: scale(-1,1);
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .navbar-cart {
+    transform: scale(1.15);
+    position: relative;
+    &:hover {
+      color: $primary;
+    }
+    .navbar-cart__icon {
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      display: block;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: $primary;
+      font-size: 10px;
+      line-height: 13px;
+      color: $black;
+      text-align: center;
     }
   }
 }

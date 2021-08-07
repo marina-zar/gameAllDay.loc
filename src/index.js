@@ -5,5 +5,5 @@ import './assets/scss/style.scss'
 
 
 /***** Import JavaScript ****/
-// import bootstrap from 'bootstrap/dist/js/bootstrap.bundle';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle';
 

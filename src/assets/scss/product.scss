@@ -6,6 +6,9 @@
   .mainSlider__img {
     img {
       margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
   .preview-slider {
@@ -42,23 +45,104 @@
     }
   }
   .product-about__cart {
+    margin-bottom: 30px;
+    vertical-align: top;
     .product-about__numb {
-      padding: 10px;
+      padding: 9px;
       margin-right: 15px;
       display: inline-block;
       width: 70px;
       text-align: center;
+      border: 0;
      }
     .product-about__btn {
-      padding: 10px 30px;
+      padding: 12px 30px;
       background: $darkdarkGray;
       color: $white;
-      border: 2px $darkdarkGray solid;
+      //border: 2px $darkdarkGray solid;
       transition: .4s ease;
       &:hover {
         background: $lightGray;
-        border: 2px $lightGray solid;
         color: $black;
+      }
+    }
+  }
+  .product-about__category {
+    a {
+      color: $primary;
+      text-decoration: underline;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.product-about__right {
+  padding-left: 50px;
+  .cart-box__title {
+    text-align: center;
+    font-weight: 400;
+  }
+  .cart-box__body {
+    .cart-box__list {
+      padding: 0;
+      .item-cart {
+        flex-wrap: wrap;
+        width: 100%;
+        border-bottom: 1px solid $Gray;
+        padding: 10px 0;
+        &__delete {
+          display: block;
+          flex: 1 1 15%;
+        }
+        &__name {
+          display: block;
+          flex: 0 1 85%;
+        }
+        a {
+          &:hover {
+            color: $primary;
+          }
+        }
+        img {
+          max-width: 35px;
+          height: auto;
+          float: right;
+        }
+        &__price {
+          flex: 1 1 100%;
+          margin-left: 15%;
+        }
+      }
+    }
+    .cart-box__totalPrice {
+      padding: 15px 0;
+      margin-bottom: 15px;
+      border-bottom: 1px solid $Gray;
+      text-align: center;
+    }
+    .cart-box__buttons {
+      .buttons__order {
+        display: block;
+        padding: 10px;
+        background: $primary;
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: 500;
+        transition: .4s all;
+        &:hover {
+          color: $black;
+        }
+        &:hover svg {
+          transform: translateX(10px);
+        }
+        &-see {
+          background: $Gray;
+        }
+        svg {
+          transition: transform .4s;
+        }
       }
     }
   }
