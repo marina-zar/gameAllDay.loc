@@ -10,22 +10,22 @@
 </head>
 <body class="h-100 d-flex">
 <!-------- Modal ------->
-    <aside> </aside>
+<aside></aside>
 
 <!-------- Header ------->
-    <header class=" fixed-top"> </header>
+<header class=" fixed-top"></header>
 
-    <main>
+<main>
     <!-------- Breadcrumbs ------->
     <small> </small>
     <!-------- Product cards trend------->
-    <section class="product-about">
+    <section class="product-page">
         <div class="container-lg">
             <div class="row">
-                <div class="col-8 product-about__left">
-                    <div class="row">
+                <div class="col-lg-8 product-page__left">
+                    <div class="row product-page__about">
 
-                        <div class="product-about__img col-6">
+                        <div class="product-page__img col-6">
                             <div class="mainSlider">
                                 <div class="mainSlider__body">
                                     <div class="mainSlider__slide">
@@ -49,33 +49,33 @@
                             </div>
                         </div>
 
-                        <div class="product-about__body col-6">
-                            <h2 class="product-about__title">7 чудес: Міста</h2>
-                            <div class="product-about__price">
+                        <div class="product-page__body col-6">
+                            <h2 class="product-page__title">7 чудес: Міста</h2>
+                            <div class="product-page__price">
                                 <div class="price">1200 <span>грн</span></div>
-                                <div class="price-old">1500 <span>грн</span></div>
+                                <div class="price-old">1500 грн</div>
                             </div>
-                            <div class="product-about__cart">
-                                <input class="product-about__numb" type="number" value="1">
-                                <a href="#" class="product-about__btn">У кошик</a>
+                            <div class="product-page__cart">
+                                <input class="product-page__numb" type="number" value="1">
+                                <a href="#" class="product-page__btn">У кошик</a>
                             </div>
                             <hr>
                             <div class="article">код товару: AR2745-56</div>
-                            <div class="product-about__category">
+                            <div class="product-page__category">
                                 <span>Категорія:</span>
                                 <a href="#">Стратегії</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="product-about__tabs tabs">
-                        <div class="row tabs__desc">
-                            <div class="col-5">Опис товару</div>
-                            <div class="col-7">
+                    <div class="product-page__info">
+                        <div class="row product-page__desc tabs">
+                            <div class="col-lg-5 col-3 tabs__title">Опис товару</div>
+                            <div class="col-lg-7 col-9 tabs__block">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam,
-                                inventore, perspiciatis. Accusantium aliquam blanditiis eius illo magnam non numquam
-                                repellendus. Accusamus amet assumenda et eveniet, fuga ipsa mollitia voluptas
-                                voluptate!</p>
+                                    inventore, perspiciatis. Accusantium aliquam blanditiis eius illo magnam non numquam
+                                    repellendus. Accusamus amet assumenda et eveniet, fuga ipsa mollitia voluptas
+                                    voluptate!</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam,
                                     inventore, perspiciatis. Accusantium aliquam blanditiis eius illo magnam non numquam
                                     repellendus. Accusamus amet assumenda et eveniet, fuga ipsa mollitia voluptas
@@ -86,61 +86,100 @@
                                     voluptate!</p>
                             </div>
                         </div>
-                        <div class="row tabs__review">
-                            <div class="col-5">Відгуки</div>
+
+                        <div class="row product-page__review tabs">
+                            <div class="col-lg-5 col-3 tabs__title">Відгуки (<span>0</span>)</div>
+                            <div class="col-lg-7 col-9 tabs__block">
+                                <form action="#" method="post" class="form" id="review">
+                                    <div class="form__review form__review-user row">
+                                        <div class="form__review-info form__review-name col-6">
+                                            <label for="name">Ім'я</label>
+                                            <input type="text" id="name" required>
+                                        </div>
+                                        <div class="form__review-info form__review-email col-6">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" placeholder="example@gmail.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="form__review form__review-rating rating" dir="rtl">
+                                        <input type="radio" id="5" name="rate" value="5">
+                                        <label for="5" class="rating__label">&#9734</label>
+                                        <input type="radio" id="4" name="rate" value="4">
+                                        <label for="4" class="rating__label">&#9734</label>
+                                        <input type="radio" id="3" name="rate" value="3">
+                                        <label for="3" class="rating__label">&#9734</label>
+                                        <input type="radio" id="2" name="rate" value="2">
+                                        <label for="2" class="rating__label">&#9734</label>
+                                        <input type="radio" id="1" name="rate" value="1">
+                                        <label for="1" class="rating__label">&#9734</label>
+                                    </div>
+                                    <div class="form__review form__review-comment">
+                                        <label for="comment">Залиште відгук</label>
+                                        <textarea name="comment" id="comment" cols="40" rows="7"></textarea>
+                                        <input type="submit" class="form__review-submit" value="Відправити">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-4 product-about__right">
-                    <h4 class="cart-box__title">Кошик</h4>
-                    <hr>
-                    <div class="cart-box__body">
-                        <ul class="cart-box__list">
-                            <li class="cart-box__item item-cart d-flex">
-                                <a href="#" class="item-cart__delete">
+                <div class="col-lg-4 col-12 product-page__right">
+                    <div class="cart-box">
+                        <h4 class="cart-box__title">Кошик</h4>
+                        <hr>
+                        <div class="cart-box__body">
+                            <ul class="cart-box__list">
+                                <li class="cart-box__item item-cart d-flex">
+                                    <a href="#" class="item-cart__delete">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             fill="currentColor"
+                                             class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="product.html" class="item-cart__name">
+                                        <img src="img/7wonders/7wonders.jpg" alt="7 чудес">
+                                        7 чудес: Міста
+                                    </a>
+                                    <div class="item-cart__price">
+                                        <span>1 x </span>1200 <span>грн</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <div class="cart-box__totalPrice">
+                                <span>Разом: </span>
+                                <span>1200</span>
+                                <span>грн</span>
+                            </div>
+                            <div class="cart-box__buttons buttons">
+                                <a href="#" class="buttons__order buttons__order-see">Подивитись
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                         class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                                         class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                                     </svg>
                                 </a>
-                                <a href="product.html" class="item-cart__name">
-                                    <img src="img/7wonders/7wonders.jpg" alt="7 чудес">
-                                    7 чудес: Міста
+                                <a href="#" class="buttons__order">Купити
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                         class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                    </svg>
                                 </a>
-                                <div class="item-cart__price">
-                                    <span>1 x </span>1200 <span>грн</span>
-                                </div>
-                            </li>
-
-                          </ul>
-                        <div class="cart-box__totalPrice">
-                            <span>Разом: </span>
-                            <span>1200</span>
-                            <span>грн</span>
-                        </div>
-                        <div class="cart-box__buttons buttons">
-                            <a href="#" class="buttons__order buttons__order-see">Подивитись
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="buttons__order">Купити
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                                </svg>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-        .
-    </main>
+    .
+</main>
 
 <!-------- Footer------->
-    <footer> </footer>
+<footer></footer>
 
 </body>
 </html>
